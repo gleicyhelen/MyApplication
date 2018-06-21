@@ -2,21 +2,25 @@ package com.example.gleic.myapplication;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.TextView;
 
-private EditText edit_value;
 
-public class SegundaTela extends MainActivity {
+public class SegundaTela extends AppCompatActivity {
+    TextView exibir_texto;
+
+
+    @Override
     protected void onCreate(Bundle SaveValue) {
 
         super.onCreate(SaveValue);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_segunda_tela);
 
-        edit_value = findViewById(R.id.edit_value);
+        exibir_texto = findViewById(R.id.exibir_texto);
 
         Bundle bundle = getIntent().getExtras();
 
-        String text = bundle.getString(getText(), "text");
+        String text = bundle.getString("Valor", "Null" );
 
-        getText(text.edit_value);
+        exibir_texto.setText(text);
     }
 }

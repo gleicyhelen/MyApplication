@@ -22,17 +22,18 @@ public class MainActivity extends AppCompatActivity {
 
         button_confirm = findViewById(R.id.button_confirm);
         text = findViewById(R.id.text);
+        edit_value = findViewById(R.id.edit_value);
 
         button_confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String edit_value = edit_value.getText().toString();
+                String editValue2 = edit_value.getText().toString();
 
                 Bundle bundle = new Bundle();
                 Intent intent = new Intent(MainActivity.this,SegundaTela.class);
 
-                bundle.putString(edit_value);
-                intent.putExtra(Bundle);
+                bundle.putString("Valor",editValue2);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
